@@ -11,9 +11,9 @@
 }
 :root {
   --color-bg: #1a535c;
-  --color-bg-variant: #2c2c6c;
+  --color-bg-variant: #13464e;
   --color-primary: #ffe66d;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant: #82763b;
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
   --transition: all 400ms ease;
@@ -95,6 +95,12 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.about_icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1024px) {

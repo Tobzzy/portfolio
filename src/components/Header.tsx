@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 export const Header = () => (
   <HeaderContainer>
     <HeaderWrapper>
-      <h5>Hello I'm</h5>
+      <Heading5>Hello I'm</Heading5>
       <h1>Toyib Ahmed</h1>
       <div>Senior Software Engineer</div>
       <CTA />
@@ -118,4 +118,8 @@ const Scroll = styled.a`
   @media screen and (max-width: 600px) {
     display: none;
   }
+`;
+
+const Heading5 = styled.h5`
+  color: var(--color-light);
 `;
