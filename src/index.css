@@ -103,6 +103,11 @@ img {
   margin-bottom: 1rem;
 }
 
+.experience-details-icon {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
