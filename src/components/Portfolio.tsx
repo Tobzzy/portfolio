@@ -3,29 +3,29 @@ import styled from "styled-components";
 const data = [
   {
     id: 1,
-    image: "./ola.png",
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    image: "./example.png",
+    title: "Example project 1",
+    github: "https://github.com",
+    demo: "https://example.com/",
   },
   {
     id: 2,
-    image: "./ola.png",
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    image: "./example.png",
+    title: "Example project 2",
+    github: "https://github.com",
+    demo: "https://example.com",
   },
   {
     id: 2,
-    image: "./ola.png",
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    image: "./example.png",
+    title: "Example project 3",
+    github: "https://github.com",
+    demo: "https://example.com",
   },
 ];
 
 export const Portfolio = () => (
-  <section id="portfolio">
+  <Section id="portfolio">
     <h5>My Recent Work</h5>
     <h2>Portfolio</h2>
     <Container>
@@ -37,10 +37,15 @@ export const Portfolio = () => (
             </ImageContainer>
             <h3>{title}</h3>
             <CTA>
-              <a href={github} className="btn" target="_blank">
+              <a href={github} className="btn" target="_blank" rel="noreferrer">
                 Github
               </a>
-              <a href={demo} className="btn btn-primary" target="_blank">
+              <a
+                href={demo}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Live Demo
               </a>
             </CTA>
@@ -48,8 +53,12 @@ export const Portfolio = () => (
         );
       })}
     </Container>
-  </section>
+  </Section>
 );
+
+const Section = styled.section`
+  margin-bottom: 120px;
+`;
 
 const Container = styled.div`
   display: grid;
@@ -70,6 +79,9 @@ const Container = styled.div`
 `;
 
 const Item = styled.article`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 2rem;
@@ -78,7 +90,7 @@ const Item = styled.article`
   margin: 1.2rem 0 2rem;
 
   &:hover {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.2);
     border-color: var(--color-primary-variant);
   }
 `;
@@ -90,6 +102,6 @@ const ImageContainer = styled.div`
 
 const CTA = styled.div`
   display: flex;
-  gap: 1rem;
+  justify-content: space-around;
   margin-bottom: 1rem;
 `;

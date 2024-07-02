@@ -31,10 +31,51 @@ const skills = [
   },
 ];
 
+const jobs = [
+  {
+    title: "Senior Software Engineer",
+    company: "Phorest Salon",
+    date: "April 2024 - present",
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "Klimata",
+    date: "January - March 2024",
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "Topia",
+    date: "May 2021 - March -2024",
+  },
+  {
+    title: "Frontend Engineer",
+    company: "Videolevels",
+    date: "December 2020 - May 2021",
+  },
+  {
+    title: "Frontend Developer",
+    company: "BD Electronics",
+    date: "June 2018 - November 2020",
+  },
+];
+
 export const Experience = () => (
-  <Section id="experience">
-    <h5>What Skills I Have</h5>
+  <section id="experience">
+    <h5>What Skills I Have / work experience</h5>
     <h2>My Experiences</h2>
+    <Timeline>
+      {jobs.map(({ title, company, date }) => (
+        <Event>
+          <EventBefore color="#ffbc00" />
+          <TimelineContent>
+            <h3>
+              {title} at {company}
+            </h3>
+            <small className="text-light">{date}</small>
+          </TimelineContent>
+        </Event>
+      ))}
+    </Timeline>
     <Container>
       {skills.map(({ title, skill }) => (
         <Skill>
@@ -53,12 +94,8 @@ export const Experience = () => (
         </Skill>
       ))}
     </Container>
-  </Section>
+  </section>
 );
-
-const Section = styled.section`
-  margin-bottom: 120px;
-`;
 
 const Container = styled.div`
   display: grid;
@@ -120,4 +157,58 @@ const Content = styled.article`
 const Details = styled.article`
   display: flex;
   gap: 1rem;
+`;
+
+const Timeline = styled.div`
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 32px;
+  font-family: Arial, sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #e9ecef;
+    top: 40px;
+    bottom: 55px;
+    left: 30px;
+    margin-left: -2px;
+  }
+`;
+
+const Event = styled.div`
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+`;
+
+const EventBefore = styled.div`
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid ${(props) => props.color};
+  top: 25px;
+  left: 24px;
+  z-index: 1;
+`;
+
+const TimelineContent = styled.div`
+  padding-left: 60px;
+  position: relative;
+  background: var(--color-bg-variant);
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: var(--color-bg);
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  }
 `;

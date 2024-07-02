@@ -11,7 +11,7 @@ const paths = [
   { path: "#", icon: <AiOutlineHome /> },
   { path: "#about", icon: <AiOutlineUser /> },
   { path: "#experience", icon: <BiBook /> },
-  { path: "#services", icon: <RiServiceLine /> },
+  { path: "#portfolio", icon: <RiServiceLine /> },
   { path: "#contact", icon: <BiMessageSquareDetail /> },
 ];
 
