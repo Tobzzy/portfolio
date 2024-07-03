@@ -64,8 +64,8 @@ export const Experience = () => (
     <h5>What Skills I Have / work experience</h5>
     <h2>My Experiences</h2>
     <Timeline>
-      {jobs.map(({ title, company, date }) => (
-        <Event>
+      {jobs.map(({ title, company, date }, index) => (
+        <Event key={index}>
           <EventBefore color="#ffbc00" />
           <TimelineContent>
             <h3>
@@ -77,12 +77,12 @@ export const Experience = () => (
       ))}
     </Timeline>
     <Container>
-      {skills.map(({ title, skill }) => (
-        <Skill>
+      {skills.map(({ title, skill }, index) => (
+        <Skill key={index}>
           <Title>{title}</Title>
           <Content>
-            {skill.map(({ language, scale }) => (
-              <Details>
+            {skill.map(({ language, scale }, index) => (
+              <Details key={index}>
                 <BsPatchCheckFill className="experience-details-icon" />
                 <div>
                   <h4>{language}</h4>

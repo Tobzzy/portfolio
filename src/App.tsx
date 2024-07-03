@@ -5,6 +5,7 @@ import { Navigation } from "./components/Navigation";
 import { About } from "./components/About";
 import { Experience } from "./components/Experience";
 import { Portfolio } from "./components/Portfolio";
+import { Contact } from "./components/Contact";
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <About />
       <Experience />
       <Portfolio />
+      <Contact />
     </>
   );
 };

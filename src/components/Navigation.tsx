@@ -20,8 +20,9 @@ export const Navigation = () => {
 
   return (
     <Nav>
-      {paths.map(({ path, icon }) => (
+      {paths.map(({ path, icon }, index) => (
         <NavLink
+          key={index}
           href={path}
           onClick={() => setActivePath(path)}
           className={activePath === path ? "active" : ""}
